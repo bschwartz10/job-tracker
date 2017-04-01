@@ -29,12 +29,12 @@ describe Job do
 
   describe "relationships" do
     it "belongs to a company" do
-      job = Job.new(title: "Software", level_of_interest: 70, description: "Wahooo")
+      job = Job.new(title: "Developer", level_of_interest: 40, city: "Denver")
       expect(job).to respond_to(:company)
     end
 
     it "belongs to a category" do
-      job = Job.new(title: "Software", level_of_interest: 70, description: "Wahooo")
+      job = Job.new(title: "Developer", level_of_interest: 40, city: "Denver")
       expect(job).to respond_to(:category)
     end
   end
