@@ -7,6 +7,7 @@ describe Category do
         category = Category.new()
         expect(category).to be_invalid
       end
+    end
 
       it "has a unique title" do
         Category.create(title: "Web Development")
@@ -19,8 +20,13 @@ describe Category do
           category = Category.new(title: "Web Development")
           expect(category).to be_valid
         end
-        
       end
-    end
+
+      context "relationships" do
+        it "has many jobs" do
+          category = Category.new(title: "Web Development")
+          expect(category).to respond_to(:jobs)
+        end
+      end
   end
 end
