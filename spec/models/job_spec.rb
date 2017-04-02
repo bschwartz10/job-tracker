@@ -37,5 +37,10 @@ describe Job do
       job = Job.new(title: "Developer", level_of_interest: 40, city: "Denver")
       expect(job).to respond_to(:category)
     end
+
+    it "has many comments" do
+      job = Job.new(title: "Developer", level_of_interest: 40, city: "Denver")
+      expect(job).to respond_to(:comments)
+    end
   end
 end
