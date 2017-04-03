@@ -1,0 +1,6 @@
+<h1>Level of Interest for All Jobs by Count</h1>
+<% @level_of_interest.each do |number, jobs| %>
+  <h4><%= number %></h4>
+  <p><%= jobs.count %></p>
+
+  <% end %>

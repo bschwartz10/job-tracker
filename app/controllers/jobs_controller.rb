@@ -52,6 +52,16 @@ class JobsController < ApplicationController
     redirect_to company_path(@company)
   end
 
+  def sort
+    if params[:sort] == "location"
+      @jobs_sort_by_location = Job.sort_by_location
+    end
+  end
+
+  def dashboard
+    @level_of_interest = Job.level_of_interest
+  end
+
   private
 
   def job_params

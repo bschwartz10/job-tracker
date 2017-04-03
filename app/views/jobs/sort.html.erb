@@ -1,0 +1,6 @@
+<% @jobs_sort_by_location.each do |city, jobs| %>
+  <h1><%= city %></h1>
+  <% jobs.each do |job| %>
+  <p><%= job.title %></p></br>
+  <% end %>
+<% end %>
