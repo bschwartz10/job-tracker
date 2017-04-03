@@ -1,25 +1,30 @@
-Title: <%= @job.title %>
+<%= link_to "<<All Jobs at #{@job.company.name}", company_path(@job.company) %></br>
+
+<h3>Title: <%= @job.title %></h3>
 <br>
 
-Description: <%= @job.description %>
+<p>Description: <%= @job.description %></p>
 <br>
 
-Level of Interest: <%= @job.level_of_interest %>
+<p>Level of Interest: <%= @job.level_of_interest %></p>
 <br>
 
-City: <%= @job.city %>
+<p>City: <%= @job.city %></p>
 <br>
 
-Company: <%= link_to @job.company.name, company_path(@job.company) %>
+<p>Company: <%= link_to @job.company.name, company_path(@job.company) %></p>
 <br>
 
-Category: <%= @job.category.title unless @job.category.nil?%>
+<p>Category: <%= @job.category.title unless @job.category.nil?%></p>
 <br>
 
+<div>
 <%= link_to "Delete", company_job_path(@company, @job), method: "delete"  %>
+</div>
 <br>
-
+<div>
 <%= link_to "Edit", edit_company_job_path(@company, @job) %>
+</div>
 
 <%= render partial: 'comments/form' %>
 
