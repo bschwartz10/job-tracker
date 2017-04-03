@@ -1,0 +1,16 @@
+<h3>Create a Contact</h3>
+
+<%= form_for [@company, @contact] do |f| %>
+<p>
+  <%= f.label :full_name %>
+  <%= f.text_field :full_name %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.label :position %>
+  <%= f.text_field :position %>
+
+  <%= f.submit %>
+</p>
+<% end %>
