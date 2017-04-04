@@ -9,3 +9,8 @@
 
   <p><%= company.average_level_of_interest %></p>
   <% end %>
+
+  <% @jobs_sort_by_location.each do |city, jobs| %>
+    <h1><%= link_to city, jobs_path(location: city) %></h1>
+    <%= jobs.count %>
+  <% end %>

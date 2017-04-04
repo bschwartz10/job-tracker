@@ -55,12 +55,18 @@ class JobsController < ApplicationController
   def sort
     if params[:sort] == "location"
       @jobs_sort_by_location = Job.sort_by_location
+    elsif params[:sort] == "interest"
+    @level_of_interest = Job.level_of_interest
+    else
+      @jobs = Job.where(city: params[:location])
     end
+
   end
 
   def dashboard
     @level_of_interest = Job.level_of_interest
     @top_level_interest = Company.top_level_interest
+    @jobs_sort_by_location = Job.sort_by_location
   end
 
   private

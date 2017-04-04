@@ -1,6 +1,20 @@
-<% @jobs_sort_by_location.each do |city, jobs| %>
-  <h1><%= city %></h1>
+<%# @jobs_sort_by_location.each do |city, jobs| %>
+  <h1><%#= city %></h1>
+  <%# jobs.each do |job| %>
+  <p><%#= job.title %></p></br>
+  <%# end %>
+<%# end %>
+
+<h1><%#= @jobs.first.city %></h1>
+<%# @jobs.each do |job| %>
+
+<p><%#= job.title %></P>
+<%# end %>
+
+<h1>Level of Interest for All Jobs by Count</h1>
+<% @level_of_interest.each do |number, jobs| %>
+  <h4><%= number %></h4>
   <% jobs.each do |job| %>
-  <p><%= job.title %></p></br>
+  <%= job.title %>
   <% end %>
 <% end %>
