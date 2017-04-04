@@ -6,6 +6,7 @@ class Job < ActiveRecord::Base
 
   def self.sort_by_location
     order(:city).group_by(&:city)
+    # group_by |job| job.city
   end
 
   def self.level_of_interest
