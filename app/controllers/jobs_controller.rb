@@ -60,6 +60,7 @@ class JobsController < ApplicationController
 
   def dashboard
     @level_of_interest = Job.level_of_interest
+    @top_level_interest = Company.top_level_interest
   end
 
   private

@@ -2,5 +2,10 @@
 <% @level_of_interest.each do |number, jobs| %>
   <h4><%= number %></h4>
   <p><%= jobs.count %></p>
+<% end %>
 
+<% @top_level_interest.each do |company| %>
+  <p><%= company.name %></p>
+
+  <p><%= company.average_level_of_interest %></p>
   <% end %>
